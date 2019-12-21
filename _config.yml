@@ -283,7 +283,7 @@ compress_html:
 defaults:
   # _posts
   - scope:
-      path: ""
+      path: "/docs/posts/"
       type: posts
     values:
       layout: splash
