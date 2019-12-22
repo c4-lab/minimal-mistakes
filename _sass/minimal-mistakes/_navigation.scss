@@ -177,7 +177,7 @@
   -ms-flex-align: center;
   align-items: center;
   min-height: $nav-height;
-  background: #ff8a00;
+  background: #fff;
 
   a {
     display: block;
@@ -236,7 +236,7 @@
         left: 0;
         bottom: 0;
         height: 4px;
-        background: $primary-color;
+        background: #ff8a00;
         width: 100%;
         -webkit-transition: $global-transition;
         transition: $global-transition;
