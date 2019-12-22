@@ -5,6 +5,7 @@
 @charset "utf-8";
 
 $masthead-link-color: #ff8a00;
+$greedy-nav .visible-links a:before
 
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
 @import "minimal-mistakes"; // main partials
