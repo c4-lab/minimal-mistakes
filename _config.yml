@@ -20,14 +20,14 @@ title                    : "C4 lab"
 title-heading            : false
 title_separator          : "|"
 subtitle                 : # site tagline that appears below site title in masthead
-name                     : "Your Name"
+name                     : "C4 lab"
 description              : "A website of C4 lab at iSchool, Syracuse University"
 url                      : "https://c4-lab.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : "c4-lab/c4-lab.github.io"
 teaser                   : "/assets/images/teaser.png"
 logo                     : "/assets/images/logo.png"
-masthead_title           : # overrides the website title displayed in the masthead, use " " for no title
+masthead_title           : " "
 breadcrumbs              : true
 words_per_minute         : 200
 comments:
