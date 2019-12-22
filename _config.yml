@@ -108,7 +108,7 @@ analytics:
 
 # Site Author
 author:
-  name             : "Your Name"
+  name             : "C4 lab"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "I am an **amazing** person."
   location         : "Syracuse, NY"
@@ -160,6 +160,7 @@ footer:
 include:
   - .htaccess
   - _pages
+  - _posts
 exclude:
   - "*.sublime-project"
   - "*.sublime-workspace"
@@ -284,7 +285,7 @@ compress_html:
 defaults:
   # _posts
   - scope:
-      path: "_posts"
+      path: "/_docs/_posts"
       type: posts
     values:
       layout: splash
