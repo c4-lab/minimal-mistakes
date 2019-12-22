@@ -4,5 +4,9 @@
 
 @charset "utf-8";
 
+$.greedy-nav .visible-links a:before {background: #f79220;}
+
+
+
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
 @import "minimal-mistakes"; // main partials
