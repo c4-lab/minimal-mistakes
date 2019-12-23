@@ -1,6 +1,8 @@
 ---
-permalink: /projects/
+
 title: "Projects"
+layout: single 
+permalink: /projects/
 
 ---
 
