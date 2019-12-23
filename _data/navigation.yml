@@ -1,8 +1,8 @@
 # main links
 main:
   - title: "Projects"
-    url: https://c4-lab.github.io/about/
+    url: https://c4-lab.github.io/projects/
   - title: "People"
     url: #
   - title: "Funding"
-    url: #
+    url: https://c4-lab.github.io/funding/
