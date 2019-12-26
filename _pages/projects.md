@@ -6,7 +6,6 @@ permalink: /projects/
 author_profile: false
 header:
     overlay_image: /assets/images/map-projects.png
-classes: wide
 toc: true
 toc_label: "What we're working on"
 toc_icon: "jedi"
