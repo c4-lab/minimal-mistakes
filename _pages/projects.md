@@ -6,8 +6,8 @@ permalink: /projects/
 author_profile: false
 toc: true
 toc_icon: 
-toc_label: "My Table of Contents"
-toc_icon: "fa-journal-whills"
+toc_label: "Projects"
+toc_icon: "journal-whills"
 
 ---
 
