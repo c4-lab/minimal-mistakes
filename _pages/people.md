@@ -4,6 +4,7 @@ title: Who we are
 layout: single 
 permalink: /people/
 author_profile: false
+classes: wide
 feature_row:
   - image_path: /assets/images/conspiracies.jpg
     alt: "placeholder image 1"
