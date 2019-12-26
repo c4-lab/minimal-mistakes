@@ -5,7 +5,7 @@ layout: single
 permalink: /projects/
 author_profile: false
 toc: true
-toc_label: "Projects"
+toc_label: "What we're working on"
 toc_icon: "jedi"
 toc_sticky: true
 
