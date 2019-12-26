@@ -4,7 +4,13 @@ title: "Projects"
 layout: single 
 permalink: /projects/
 author_profile: false
+toc: true
+toc_icon: 
+toc_label: "My Table of Contents"
+toc_icon: "fa-journal-whills"
 
 ---
 
-Minimal Mistakes is a flexible two-column Jekyll theme. Perfect for hosting your personal site, blog, or portfolio on GitHub or self-hosting on your own server. As the name implies --- styling is purposely minimalistic to be enhanced and customized by you :smile:.
+{% include toc %}
+
+**Minimal Mistakes** is a flexible two-column Jekyll theme. Perfect for hosting your personal site, blog, or portfolio on GitHub or self-hosting on your own server. As the name implies --- styling is purposely minimalistic to be enhanced and customized by you :smile:.
