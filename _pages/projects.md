@@ -1,7 +1,6 @@
 ---
 
-title: "What we're working on"
-title: false
+title: What we're working on
 layout: single 
 permalink: /projects/
 author_profile: false
