@@ -1,9 +1,10 @@
 ---
 
-title: "Projects"
+title: "What we're working on"
 layout: single 
 permalink: /projects/
 author_profile: false
+header: overlay_image: /assets/images/map-projects.png
 toc: true
 toc_label: "What we're working on"
 toc_icon: "jedi"
