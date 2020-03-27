@@ -38,8 +38,10 @@ feature_row:
 
 **Minimal Mistakes** is a flexible two-column Jekyll theme. Perfect for hosting your personal site, blog, or portfolio on GitHub or self-hosting on your own server. As the name implies --- styling is purposely minimalistic to be enhanced and customized by you :smile:.
 
+## Current team
 {% include feature_row id="feature_row2" type="left" %}
 
+## worked with us
 {% include feature_row %}
 
 
