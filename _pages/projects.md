@@ -17,7 +17,9 @@ toc_sticky: true
 
 Perfect for hosting your personal site, blog, or portfolio on GitHub or self-hosting on your own server.
 
-Nullam faucibus mi quis velit. Aenean vel massa quis mauris vehicula lacinia. Maecenas sollicitudin. Nunc dapibus tortor vel mi dapibus sollicitudin. Maecenas sollicitudin. Praesent dapibus. Etiam dictum tincidunt diam. Etiam dui sem, fermentum vitae, sagittis id, malesuada in, quam. Morbi scelerisque luctus velit. Fusce aliquam vestibulum ipsum. Duis bibendum, lectus ut viverra rhoncus, dolor nunc faucibus libero, eget facilisis enim ipsum id lacus. Integer imperdiet lectus quis justo. 
+Nullam faucibus mi quis velit. Aenean vel massa quis mauris vehicula lacinia. Maecenas sollicitudin. Nunc dapibus tortor vel mi dapibus sollicitudin. Maecenas sollicitudin. Praesent dapibus.
+
+<a href="/smsociety-2020-mapping/">More information about the project.</a>
 
 ### Subheadline here
 
