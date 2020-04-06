@@ -27,8 +27,8 @@ feature_row:
     title: "Niraj Satula"
     excerpt: "This is some sample content that goes here with **Markdown** formatting."
     
-  - image_path: /assets/images/ischool.jpg
-    alt: "placeholder image 5"
+  - image_path: /assets/images/Ben-Zefeng-Zhang.jpg
+    alt: "Ben Zefeng Zhang"
     title: "Ben Zefeng Zhang"
     excerpt: "Zefeng (Ben) Zhang is a second-year master's student in the School of Information Studies at Syracuse University. His research interest lies in the field of Human-Centered Computing (HCI) and Information and Communication Technology for Development (IC4TD). His current research explores the relationship between socio-technical systems and inclusion. Zhang hopes to improve access, participation, collaboration, and innovation among people, and subsequently reduce social disparities through his research. Prior to joining Syracuse University, he worked as a feature writer and columnist at China Daily, China's leading English-language news outlet."
     
