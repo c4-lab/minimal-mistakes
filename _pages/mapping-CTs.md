@@ -1,8 +1,7 @@
 ---
 
-title: Mapping the Narrative Ecosystem of Conspiracy Theories in Online Anti-vaccination Discussions
-layout: single 
-permalink: /smsociety-2020-mapping/
+title: Mapping the Narrative Ecosystem of Conspiracy Theories
+permalink: /mapping-CTs/
 author_profile: false
 toc: true
 toc_label: "Menu"
@@ -11,7 +10,7 @@ toc_sticky: true
 
 ---
 
-## About the project
+## Paper: Mapping the Narrative Ecosystem of Conspiracy Theories in Online Anti-vaccination Discussions
 
 Nullam faucibus mi quis velit. Aenean vel massa quis mauris vehicula lacinia. Maecenas sollicitudin. Nunc dapibus tortor vel mi dapibus sollicitudin. Maecenas sollicitudin. Praesent dapibus. 
 

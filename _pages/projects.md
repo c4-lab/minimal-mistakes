@@ -19,7 +19,7 @@ Perfect for hosting your personal site, blog, or portfolio on GitHub or self-hos
 
 Nullam faucibus mi quis velit. Aenean vel massa quis mauris vehicula lacinia. Maecenas sollicitudin. Nunc dapibus tortor vel mi dapibus sollicitudin. Maecenas sollicitudin. Praesent dapibus.
 
-<a href="/smsociety-2020-mapping/">More information about the project.</a>
+<a href="/mapping-CTs/">More information about the project.</a>
 
 ### Subheadline here
 
