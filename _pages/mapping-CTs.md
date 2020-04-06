@@ -1,6 +1,7 @@
 ---
 
 title: Mapping the Narrative Ecosystem of Conspiracy Theories
+layout: single
 permalink: /mapping-CTs/
 author_profile: false
 toc: true
