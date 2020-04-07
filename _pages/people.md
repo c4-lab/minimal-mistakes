@@ -9,6 +9,7 @@ feature_row1:
     alt: "Josh Introne"
     title: "Josh Introne, PhD"
     excerpt: "Josh is an assistant professor at Syracuse University iSchool."
+
 feature_row2:
   - image_path: /assets/images/ischool.jpg
     alt: "placeholder image 2"
@@ -37,6 +38,7 @@ feature_row2:
     - image_path: /assets/images/writing.jpg
     title: "Subhaasree Sengupta"
     excerpt: "This is some sample content that goes here with **Markdown** formatting."
+
 feature_row3: 
     - image_path: /assets/images/Ben-Zefeng-Zhang.jpg
     alt: "Ben Zefeng Zhang"
