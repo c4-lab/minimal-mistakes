@@ -4,7 +4,7 @@ layout: single
 permalink: /people/
 author_profile: false
 classes: wide
-feature_row1:
+feature_row:
   - image_path: /assets/images/Josh-Introne.jpg
     alt: "Josh Introne"
     title: "Josh Introne, PhD"
