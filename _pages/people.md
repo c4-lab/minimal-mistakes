@@ -5,7 +5,7 @@ layout: single
 permalink: /people/
 author_profile: false
 classes: wide
-feature_row:
+feature_row1:
   - image_path: /assets/images/Josh-Introne.jpg
     alt: "placeholder image 1"
     title: "Josh Introne, PhD"
@@ -56,7 +56,7 @@ feature_row2:
 **Minimal Mistakes** is a flexible two-column Jekyll theme. Perfect for hosting your personal site, blog, or portfolio on GitHub or self-hosting on your own server. As the name implies --- styling is purposely minimalistic to be enhanced and customized by you :smile:.
 
 ## Faculty
-{% include feature_row %}
+{% include feature_row id="feature_row1" %}
 
 ## PhD Students
 {% include feature_row id="feature_row2" %}
