@@ -6,7 +6,7 @@ permalink: /people/
 author_profile: false
 classes: wide
 feature_row:
-  - image_path: /assets/images/conspiracies.jpg
+  - image_path: /assets/images/Josh-Introne.jpg
     alt: "placeholder image 1"
     title: "Josh Introne, PhD"
     excerpt: "Josh is an assistant professor at iSchool and the PI of the lab."
