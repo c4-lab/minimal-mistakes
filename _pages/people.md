@@ -5,11 +5,14 @@ layout: single
 permalink: /people/
 author_profile: false
 classes: wide
+intro:
+- excerpt: **Minimal Mistakes** is a flexible two-column Jekyll theme. Perfect for hosting your personal site, blog, or portfolio on GitHub or self-hosting on your own server. As the name implies --- styling is purposely minimalistic to be enhanced and customized by you :smile:.
 feature_row1:
   - image_path: /assets/images/Josh-Introne.jpg
-    alt: "placeholder image 1"
+    alt: "Josh Introne"
     title: "Josh Introne, PhD"
     excerpt: "Josh is an assistant professor at Syracuse University iSchool."
+
 feature_row2:
   - image_path: /assets/images/ischool.jpg
     alt: "placeholder image 2"
@@ -27,19 +30,24 @@ feature_row2:
     title: "Niraj Sitaula"
     excerpt: "Niraj is a first year PhD student in Information Science and Technology at Syracuse University and a research assistant for Josh Introne. His research interest is in data science and artificial intelligence where he’s broadly interested in solving problems related to knowledge mining and building artificial intelligence with reasoning. Previously, Niraj was a research assistant for TRACE project at CCDS at the iSchool. Niraj completed MS in Computer Science from Syracuse University with coursework focused in artificial intelligence, machine learning, and data mining."
     
-  - image_path: /assets/images/Ben-Zefeng-Zhang.jpg
-    alt: "Ben Zefeng Zhang"
-    title: "Zefeng (Ben) Zhang"
-    excerpt: "Zefeng (Ben) Zhang is a second-year master's student in the School of Information Studies at Syracuse University. His research interest lies in the field of Human-Centered Computing (HCI) and Information and Communication Technology for Development (IC4TD). His current research explores the relationship between socio-technical systems and inclusion. Zhang hopes to improve access, participation, collaboration, and innovation among people, and subsequently reduce social disparities through his research. Prior to joining Syracuse University, he worked as a feature writer and columnist at China Daily, China's leading English-language news outlet."
-    
   - image_path: /assets/images/writing.jpg
     title: "Dipto Das"
     excerpt: "This is some sample content that goes here with **Markdown** formatting."
     
   - image_path: /assets/images/writing.jpg
     title: "Sarah Bolden"
-    excerpt: "This is some sample content that goes here with **Markdown** formatting."  
-       
+    excerpt: "This is some sample content that goes here with **Markdown** formatting."
+    
+    - image_path: /assets/images/writing.jpg
+    title: "Subhaasree Sengupta"
+    excerpt: "This is some sample content that goes here with **Markdown** formatting."
+
+feature_row3: 
+    - image_path: /assets/images/Ben-Zefeng-Zhang.jpg
+    alt: "Ben Zefeng Zhang"
+    title: "Zefeng (Ben) Zhang"
+    excerpt: "Zefeng (Ben) Zhang is a second-year master's student in the School of Information Studies at Syracuse University. His research interest lies in the field of Human-Centered Computing (HCI) and Information and Communication Technology for Development (IC4TD). His current research explores the relationship between socio-technical systems and inclusion. Zhang hopes to improve access, participation, collaboration, and innovation among people, and subsequently reduce social disparities through his research. Prior to joining Syracuse University, he worked as a feature writer and columnist at China Daily, China's leading English-language news outlet."
+ 
   - image_path: /assets/images/writing.jpg
     title: "Junci Lu"
     excerpt: "This is some sample content that goes here with **Markdown** formatting."
@@ -48,21 +56,18 @@ feature_row2:
     title: "Maimonah Abdulkareem Alalwani"
     excerpt: "This is some sample content that goes here with **Markdown** formatting."
 
-  - image_path: /assets/images/writing.jpg
-    title: "Subhaasree Sengupta"
-    excerpt: "This is some sample content that goes here with **Markdown** formatting."
+  
 ---
-
-**Minimal Mistakes** is a flexible two-column Jekyll theme. Perfect for hosting your personal site, blog, or portfolio on GitHub or self-hosting on your own server. As the name implies --- styling is purposely minimalistic to be enhanced and customized by you :smile:.
+{% include feature_row id="intro" type="center" %}
 
 ## Faculty
-{% include feature_row id="feature_row1" %}
+{% include feature_row %}
 
 ## PhD Students
 {% include feature_row id="feature_row2" %}
 
 ## Worked with us
-To be completed...
+{% include feature_row id="feature_row3" %}
 
 
 
