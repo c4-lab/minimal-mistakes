@@ -1,5 +1,4 @@
 ---
-
 title: Who we are
 layout: single 
 permalink: /people/
