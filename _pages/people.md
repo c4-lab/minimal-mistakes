@@ -62,7 +62,6 @@ feature_row2:
 ## PhD Students
 {% include feature_row2 %}
 
-
 ## Worked with us
 To be completed...
 
