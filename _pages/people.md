@@ -9,7 +9,7 @@ feature_row:
   - image_path: /assets/images/Josh-Introne.jpg
     alt: "placeholder image 1"
     title: "Josh Introne, PhD"
-    excerpt: "Josh is an assistant professor at iSchool and the PI of the lab."
+    excerpt: "Josh is an assistant professor at Syracuse University iSchool."
     
   - image_path: /assets/images/ischool.jpg
     alt: "placeholder image 2"
