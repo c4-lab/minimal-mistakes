@@ -38,8 +38,7 @@ feature_row2:
     - image_path: /assets/images/writing.jpg
     title: "Subhaasree Sengupta"
     excerpt: "This is some sample content that goes here with **Markdown** formatting."
-
-feature_row3: 
+ 
     - image_path: /assets/images/Ben-Zefeng-Zhang.jpg
     alt: "Ben Zefeng Zhang"
     title: "Zefeng (Ben) Zhang"
@@ -56,13 +55,12 @@ feature_row3:
 ---
 
 ## Faculty
-{% include feature_row id="feature_row1" %}
+{% include feature_row %}
 
-## PhD Students
+## PhD & Master's students
 {% include feature_row id="feature_row2" %}
 
 ## Worked with us
-{% include feature_row id="feature_row3" %}
 
 
 
