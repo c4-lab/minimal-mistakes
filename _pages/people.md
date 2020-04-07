@@ -18,14 +18,14 @@ feature_row:
     url: "#test-link"
     btn_label: Twitter
     
-  - image_path: /assets/images/writing.jpg
+  - image_path: /assets/images/Ania-Korsunska.jpg
     title: "Ania Korsunska"
     excerpt: "Ania is a third year PhD student at the Syracuse University iSchool. Her research focus is on how medical information disseminates through the media. Specifically interested in viral events, network analysis, information diffusion, and data visualization. She has an previously completed PhD coursework at Temple University in the Klein School of Media and Communication, has an MA from the University of Chicago (MA Program in Social Sciences, focus on medical sociology), and a BA from Bilkent University in Communication and Design. "
     
   - image_path: /assets/images/conspiracies.jpg
     alt: "placeholder image 4"
     title: "Niraj Sitaula"
-    excerpt: "Niraj is a first year PhD student in Information Science and Technology at Syracuse University and a research assistant for Josh Introne. His research interest is in data science and artificial intelligence where he’s broadly interested in solving problems related to knowledge mining and building artificial intelligence with reasoning. With professor Introne, they look into understanding and modeling the relationship of social pressure from individual’s network and coherence to individual’s prior knowledge on how individual adopts information or updates belief system. Previously, Niraj was a research assistant for TRACE project. Niraj completed MS in Computer Science from Syracuse University with coursework focused in artificial intelligence, machine learning, and data mining."
+    excerpt: "Niraj is a first year PhD student in Information Science and Technology at Syracuse University and a research assistant for Josh Introne. His research interest is in data science and artificial intelligence where he’s broadly interested in solving problems related to knowledge mining and building artificial intelligence with reasoning. Previously, Niraj was a research assistant for TRACE project at CCDS at the iSchool. Niraj completed MS in Computer Science from Syracuse University with coursework focused in artificial intelligence, machine learning, and data mining."
     
   - image_path: /assets/images/Ben-Zefeng-Zhang.jpg
     alt: "Ben Zefeng Zhang"
