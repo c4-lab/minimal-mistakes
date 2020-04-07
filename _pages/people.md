@@ -11,6 +11,7 @@ feature_row:
     title: "Josh Introne, PhD"
     excerpt: "Josh is an assistant professor at Syracuse University iSchool."
     
+feature_row2:
   - image_path: /assets/images/ischool.jpg
     alt: "placeholder image 2"
     title: "Leni Krsova"
@@ -55,8 +56,12 @@ feature_row:
 
 **Minimal Mistakes** is a flexible two-column Jekyll theme. Perfect for hosting your personal site, blog, or portfolio on GitHub or self-hosting on your own server. As the name implies --- styling is purposely minimalistic to be enhanced and customized by you :smile:.
 
-## Current C4 lab team
+## Faculty
 {% include feature_row %}
+
+## PhD Students
+{% include feature_row2 %}
+
 
 ## Worked with us
 To be completed...
