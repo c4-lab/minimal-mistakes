@@ -10,7 +10,6 @@ feature_row:
     alt: "placeholder image 1"
     title: "Josh Introne, PhD"
     excerpt: "Josh is an assistant professor at Syracuse University iSchool."
-    
 feature_row2:
   - image_path: /assets/images/ischool.jpg
     alt: "placeholder image 2"
@@ -60,7 +59,7 @@ feature_row2:
 {% include feature_row %}
 
 ## PhD Students
-{% include feature_row2 %}
+{% include feature_row id="feature_row2" %}
 
 ## Worked with us
 To be completed...
