@@ -11,7 +11,7 @@ toc_sticky: true
 ---
 
 ## Mapping the Narrative Ecosystem of Conspiracy Theories in Online Anti-vaccination Discussions
-**Authors**: Joshua Introne, Ania Korsunska, Leni Krsova, Zefeng Zhang</br>
+**Authors**: Joshua Introne, Ania Korsunska, Leni Krsova, Zefeng Zhang
 
 ### Abstract
 This is where an abstract will be.
