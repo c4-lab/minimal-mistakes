@@ -25,6 +25,7 @@ This is where our findings will be.
 Click on the image to download a full map.
 
 ### Codebook
+This is where a link to our Codebook will be.
 
 ### Future work
 This is where we talk about possible future work.
