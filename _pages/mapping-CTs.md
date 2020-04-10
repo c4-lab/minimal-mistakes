@@ -32,3 +32,5 @@ This is where we talk about possible future work.
 
 ### Acknowledgements
 This research is supported by the National Science Foundation under grant no.1908407. We thank Sehrish Ahmed, Jingxian Sun, Zimo Xu, Yankun Wang and Mingkang Zhang for their help with coding and data scraping.
+
+### Cite as
