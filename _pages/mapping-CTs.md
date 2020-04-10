@@ -1,7 +1,7 @@
 ---
 
 title: Mapping the Narrative Ecosystem of Conspiracy Theories
-layout: single
+layout: wide
 permalink: /mapping-CTs/
 author_profile: false
 toc: true
@@ -12,8 +12,8 @@ toc_sticky: true
 
 ## Mapping the Narrative Ecosystem of Conspiracy Theories in Online Anti-vaccination Discussions
 
-#### Authors
-Joshua Introne, Ania Korsunska, Leni Krsova, Zefeng Zhang
+*Authors*: Joshua Introne, Ania Korsunska, Leni Krsova, Zefeng Zhang
+Paper has been accepted to the <a href="https://socialmediaandsociety.org" target="_blank" alt="Social Media & Society 2020 website">Social Media & Society 2020 conference</a>.
 
 ### Abstract
 
@@ -27,7 +27,7 @@ This is where our findings will be.
 
 This is where we talk about possible future work.
 
-#### Acknowledgements
+### Acknowledgements
 This research is supported by the National Science Foundation under grant no.1908407. We thank Sehrish Ahmed, Jingxian Sun, Zimo Xu, Yankun Wang and Mingkang Zhang for their help with coding and data scraping.
 
 ### Resources
