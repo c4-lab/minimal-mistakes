@@ -15,10 +15,7 @@ toc_sticky: true
 
 ## Mapping the narrative ecosystem of conspiracy theories
 
-Perfect for hosting your personal site, blog, or portfolio on GitHub or self-hosting on your own server.
-
-### Social Media & Society 2020 paper: Mapping the Narrative Ecosystem of Conspiracy Theories in Online Anti-vaccination DiscussionsPermalink
-Nullam faucibus mi quis velit. Aenean vel massa quis mauris vehicula lacinia. Maecenas sollicitudin. Nunc dapibus tortor vel mi dapibus sollicitudin. Maecenas sollicitudin. Praesent dapibus.
+Perfect for hosting your personal site, blog, or portfolio on GitHub or self-hosting on your own server. Nullam faucibus mi quis velit. Aenean vel massa quis mauris vehicula lacinia. Maecenas sollicitudin. Nunc dapibus tortor vel mi dapibus sollicitudin. Maecenas sollicitudin. Praesent dapibus.
 
 <a href="/mapping-CTs/">More information about these projects.</a>
 
@@ -39,10 +36,6 @@ Aenean placerat. Etiam dictum tincidunt diam. Integer rutrum, orci vestibulum ul
 ## Project 4
 
 Duis viverra diam non justo. Nullam eget nisl. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
-
-### subheadline
-
-Morbi imperdiet, mauris ac auctor dictum, nisl ligula egestas nulla, et sollicitudin sem purus in lacus. Cras pede libero, dapibus nec, pretium sit amet, tempor quis. Maecenas lorem. Integer imperdiet lectus quis justo. Aliquam ornare wisi eu metus. 
 
 ## Project 5
 
