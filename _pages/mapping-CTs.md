@@ -8,6 +8,7 @@ toc: true
 toc_label: "Menu"
 toc_icon: "sitemap"
 toc_sticky: true
+
 ---
 
 ## Mapping the Narrative Ecosystem of Conspiracy Theories in Online Anti-vaccination Discussions
@@ -25,7 +26,7 @@ This is where our findings will be.
 Click on the image to download a full map.
 
 ### Codebook
-This is where a link to our Codebook will be.
+This is where a link to our <a href="/assets/files/codebook-CT-narratives_SMSociety2020.pdf" target="_blank">Codebook</a> will be.
 
 ### Future work
 This is where we talk about possible future work.
