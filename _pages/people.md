@@ -4,7 +4,7 @@ layout: single
 permalink: /people/
 author_profile: false
 classes: wide
-feature_row:
+feature_row1:
   - image_path: /assets/images/Josh-Introne.jpg
     alt: "Josh Introne"
     title: "Josh Introne, PhD"
@@ -55,12 +55,13 @@ feature_row2:
 ---
 
 ## Faculty
-{% include feature_row %}
+{% include feature_row id="feature_row1" %}
 
-## PhD & Master's students
+## PhD & MasterStudents
 {% include feature_row id="feature_row2" %}
 
 ## Worked with us
+{% include feature_row id="feature_row3" %}
 
 
 

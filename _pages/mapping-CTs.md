@@ -11,7 +11,7 @@ toc_sticky: true
 
 ---
 
-## Paper: Mapping the Narrative Ecosystem of Conspiracy Theories in Online Anti-vaccination Discussions
+## Mapping the Narrative Ecosystem of Conspiracy Theories in Online Anti-vaccination Discussions
 
 ### Abstract
 
@@ -23,6 +23,11 @@ Aliquam erat volutpat. Maecenas ipsum velit, consectetuer eu lobortis ut, dictum
 
 ### Resources
 
+#### Map of conspiracy theories
+
+<img src="images/map-CTs-preview.jpg">
+To see the full map click on the image.
+
 #### Codebook
 
-Morbi imperdiet, mauris ac auctor dictum, nisl ligula egestas nulla, et sollicitudin sem purus in lacus. Cras pede libero, dapibus nec, pretium sit amet, tempor quis. 
+
