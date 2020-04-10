@@ -8,26 +8,34 @@ toc: true
 toc_label: "Menu"
 toc_icon: "sitemap"
 toc_sticky: true
-
-
-
 ---
 
 ## Mapping the Narrative Ecosystem of Conspiracy Theories in Online Anti-vaccination Discussions
 
+#### Authors
+Joshua Introne, Ania Korsunska, Leni Krsova, Zefeng Zhang
+
 ### Abstract
 
-Nullam faucibus mi quis velit. Aenean vel massa quis mauris vehicula lacinia. Maecenas sollicitudin. Nunc dapibus tortor vel mi dapibus sollicitudin. Maecenas sollicitudin. Praesent dapibus. 
+This is where an abstract will be.
 
 ### Findings
 
-Aliquam erat volutpat. Maecenas ipsum velit, consectetuer eu lobortis ut, dictum at dui. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Nullam justo enim, consectetuer nec, ullamcorper ac, vestibulum in, elit. Nulla accumsan, elit sit amet varius semper, nulla mauris mollis quam, tempor suscipit diam nulla vel leo. Duis viverra diam non justo. Nullam eget nisl. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+This is where our findings will be.
+
+### Future work
+
+This is where we talk about possible future work.
+
+#### Acknowledgements
+This research is supported by the National Science Foundation under grant no.1908407. We thank Sehrish Ahmed, Jingxian Sun, Zimo Xu, Yankun Wang and Mingkang Zhang for their help with coding and data scraping.
 
 ### Resources
 
 #### Map of conspiracy theories
-<img src="/assets/images/map-CTs-preview.png">
-To see the full map click on the image.
+<a href="/assets/files/map-CTs-SMSociety2020.pdf" target="_blank"><img src="/assets/images/map-CTs-preview.png" alt="Mapping of conspiracy theory"></a>
+
+To download a full map click on the image.
 
 #### Codebook
 
