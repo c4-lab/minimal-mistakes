@@ -25,7 +25,7 @@ Aliquam erat volutpat. Maecenas ipsum velit, consectetuer eu lobortis ut, dictum
 
 #### Map of conspiracy theories
 
-<img src="assets/images/map-CTs-preview.jpg">
+<img src="/assets/images/map-CTs-preview.jpg">
 To see the full map click on the image.
 
 #### Codebook
