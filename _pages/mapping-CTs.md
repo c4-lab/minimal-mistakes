@@ -20,17 +20,15 @@ This is where an abstract will be.
 ### Findings
 This is where our findings will be.
 
-### Future work
-This is where we talk about possible future work.
-
-### Resources
-
-#### Map of conspiracy theories
+### Map of conspiracy theories
 <a href="/assets/files/map-CTs-SMSociety2020.pdf" target="_blank"><img src="/assets/images/map-CTs-preview.png" alt="Mapping of conspiracy theory"></a>
 
 Click on the image to download a full map.
 
-#### Codebook
+### Codebook
+
+### Future work
+This is where we talk about possible future work.
 
 ### Acknowledgements
 This research is supported by the National Science Foundation under grant no.1908407. We thank Sehrish Ahmed, Jingxian Sun, Zimo Xu, Yankun Wang and Mingkang Zhang for their help with coding and data scraping.
