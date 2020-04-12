@@ -31,7 +31,7 @@ or powerless groups in order to make money or gain power, and these vaccines cau
 Click on the image to download a full map.
 
 ### Codebook
-If interested we made our <a href="/assets/files/codebook-CT-narratives_SMSociety2020.pdf" target="_blank">codebook</a> available to read through.
+If interested we made our <a href="/assets/files/codebook-CT-narratives_SMSociety2020.pdf" target="_blank">codebook</a> available to read.
 
 ### Future work
 We believe our initial results offer one potential route for understanding not only cross-sectional differentiation, but the longitudinal dynamics of the narrative. In particular, **we are interested in examining how activity within the framework of the narrative shifts in response to news events and social media platforms’ nascent efforts to control different types of misinformation**. Such analysis will help us to better understand how collectively constructed conspiracy narratives adapt in a shifting media ecosystem.
