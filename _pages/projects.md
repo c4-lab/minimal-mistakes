@@ -11,32 +11,20 @@ toc_sticky: true
 
 ---
 
-**Minimal Mistakes** is a flexible two-column Jekyll theme. Perfect for hosting your personal site, blog, or portfolio on GitHub or self-hosting on your own server. As the name implies --- styling is purposely minimalistic to be enhanced and customized by you :smile:.
+## The Fitness and Growth of Conspiracy Theories
 
-## Mapping the narrative ecosystem of conspiracy theories
+### Mapping the Narrative Ecosystem of Anti-Vaccination Conspiracy Theories
 
-Perfect for hosting your personal site, blog, or portfolio on GitHub or self-hosting on your own server. Nullam faucibus mi quis velit. Aenean vel massa quis mauris vehicula lacinia. Maecenas sollicitudin. Nunc dapibus tortor vel mi dapibus sollicitudin. Maecenas sollicitudin. Praesent dapibus.
+<a href="/mapping-CTs/">More information about projects under this category.</a>
 
-<a href="/mapping-CTs/">More information about these projects.</a>
+## Dynamics of Belief and Misinformation Online
 
-## Cognitive inertia
+This section is currently under development.
 
-As the name implies --- styling is purposely minimalistic to be enhanced and customized by you :smile:.
+## The Role of Narratives in Community Dynamics
 
-Morbi imperdiet, mauris ac auctor dictum, nisl ligula egestas nulla, et sollicitudin sem purus in lacus. Cras pede libero, dapibus nec, pretium sit amet, tempor quis. Maecenas lorem. Integer imperdiet lectus quis justo. Aliquam ornare wisi eu metus. 
+This section is currently under development.
 
-Etiam sapien elit, consequat eget, tristique non, venenatis quis, ante. Praesent in mauris eu tortor porttitor accumsan. Fusce tellus. Cras pede libero, dapibus nec, pretium sit amet, tempor quis. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. 
+## Building Sustainable and Accessible Online Social Support for Stigmatized Populations
 
-## Project 3
-
-Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed convallis magna eu sem. Proin pede metus, vulputate nec, fermentum fringilla, vehicula vitae, justo. Integer imperdiet lectus quis justo.
-
-Aenean placerat. Etiam dictum tincidunt diam. Integer rutrum, orci vestibulum ullamcorper ultricies, lacus quam ultricies odio, vitae placerat pede sem sit amet enim. Proin pede metus, vulputate nec, fermentum fringilla, vehicula vitae, justo. 
-
-## Project 4
-
-Duis viverra diam non justo. Nullam eget nisl. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
-
-## Project 5
-
-To be continued...
+This section is currently under development.
