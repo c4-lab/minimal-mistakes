@@ -19,10 +19,6 @@ Download <a href="#">full paper</a>.
 ### Abstract
 Recent research on conspiracy theories labels conspiracism as a distinct and deficient epistemic process. However, the tendency to pathologize conspiracism obscures the fact that it is a diverse and dynamic collective sensemaking process, transacted in public on the web. Here, we adopt a narrative framework to introduce a new analytical approach for examining online conspiracism. Narrative plays an important role because it is central to human cognition and domain agnostic, and so can serve as a bridge between conspiracism and other modes of knowledge production. To illustrate our approach, we use it to analyze conspiracy theories identified in conversations across three different anti-vaccination discussion forums. Our approach enables us to capture more abstract categories without hiding the underlying diversity of the raw data. We find that there are dominant narrative themes across sites, but that there is also a tremendous amount of diversity within these themes. Our initial observations raise the possibility that different communities play different roles in the collective construction of conspiracy theories online. This offers one potential route for understanding not only cross-sectional differentiation, but the longitudinal dynamics of the narrative in future work. In particular, we are interested to examine how activity within the framework of the narrative shifts in response to news events and social media platforms’ nascent efforts to control different types of misinformation. Such analysis will help us to better understand how collectively constructed conspiracy narratives adapt in a shifting media ecosystem.
 
-### Definition of a conspiracy theory
-
-A conspiracy theory is a narrative explaining an event or series of events that involve deceptive, coordinated actors working together to achieve a goal through an action or series of actions that have consequences that intentionally disenfranchise or harm and individual or population.
-
 ### Findings
 We find that **complete conspiracy theories are relatively rare**, instances of conspiratorial thinking are roughly three times as prevalent, and that there are clear differences amongst the different sites, with Mothering exhibiting the least prevalence of conspiracism and Above Top Secret exhibiting the most.
 
@@ -30,6 +26,12 @@ In general, **conspiracist posts seem to dwell primarily on actors, followed by 
 
 Following our narrative template, **we might summarize the collected Conspiracy Theories as the following**: Big Pharma and other powerful institutions distribute dangerous and toxic vaccines to the general public and other disadvantaged
 or powerless groups in order to make money or gain power, and these vaccines cause harm, suffering, and possibly death.
+
+### Definition of a conspiracy theory
+
+A conspiracy theory is a narrative explaining an <font color="#9933cc">event or series of events</font> that involve deceptive, coordinated actors working together to achieve a goal through an action or series of actions that have consequences that intentionally disenfranchise or harm and individual or population.
+
+
 
 ### Map of conspiracy theories
 <a href="/assets/files/map-CTs-SMSociety2020.pdf" target="_blank"><img src="/assets/images/map-CTs-preview.png" alt="Mapping of conspiracy theory"></a>
