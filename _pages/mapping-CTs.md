@@ -29,9 +29,7 @@ or powerless groups in order to make money or gain power, and these vaccines cau
 
 ### Definition of a conspiracy theory
 
-A conspiracy theory is a narrative explaining an <font color="#9933cc">event or series of events</font> that involve deceptive, coordinated actors working together to achieve a goal through an action or series of actions that have consequences that intentionally disenfranchise or harm and individual or population.
-
-
+A conspiracy theory is a narrative explaining <font color="#9933cc">an event or series of events</font> that involve <font color="#6aa84f">deceptive, coordinated actors</font> working together to achieve <font color="#ff3366">a goal</font> through <font color="#006699">an action or series of actions</font> that have <font color="#cc9900">consequences</font> that intentionally disenfranchise or harm an <font color="#ff0000">individual or population</font>.
 
 ### Map of conspiracy theories
 <a href="/assets/files/map-CTs-SMSociety2020.pdf" target="_blank"><img src="/assets/images/map-CTs-preview.png" alt="Mapping of conspiracy theory"></a>
