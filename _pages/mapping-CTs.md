@@ -44,3 +44,4 @@ We believe our initial results offer one potential route for understanding not o
 This research is supported by the <a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=1908407&HistoricalAwards=false" target="_blank">National Science Foundation under grant no.1908407</a>. We thank Sehrish Ahmed, Jingxian Sun, Zimo Xu, Yankun Wang and Mingkang Zhang for their help with coding and data scraping.
 
 ### Cite as
+Introne, J., Korsunska, A., Krsova, L., & Zhang, Z. (2020, July). Mapping the Narrative Ecosystem of Conspiracy Theories in Online Anti-vaccination Discussions. In International Conference on Social Media and Society (pp. 184-192).
