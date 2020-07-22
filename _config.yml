@@ -110,7 +110,7 @@ analytics:
 author:
   name             : "C4 lab"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "I am an **amazing** person."
+  bio              : # bio
   location         : "Syracuse, NY"
   email            :
   links:
