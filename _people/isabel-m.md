@@ -5,7 +5,7 @@ custom_url: https://www.iisabelmunoz.com/
 key: 3
 skip_pagination: true
 header:
-  teaser: assets/images/isabel-m.png
+  teaser: assets/images/Isabel-m.png
 sidebar:
   - title: Role
     image: assets/images/Isabel-m.png
