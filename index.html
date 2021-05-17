@@ -1,37 +1,14 @@
 ---
 title: C4 lab
-layout: splash
+layout: my_splash
 author_profile: false
-header:
-  overlay_image: /assets/images/sna-image-header.png
-intro:
-- excerpt: '<b>Welcome!</b> Have you ever wondered <u>how conspiracy theory narratives are developed</u>? What makes people change their mind? How is it possible that <u>a belief system is such a powerful concept</u>? Are you curious in how <u>social networks support spreading of knowledge</u>? You are at the right place! We at <b>C4 lab at iSchool, Syracuse University</b> research all that, and much more.'
-feature_row:
-  - image_path: /assets/images/conspiracies.jpg
-    alt: "Everything is connected!"
-    title: "Projects & papers"
-    excerpt: "We map conspiracy theories narratives, analyze cognitive inertia, which belief systems cause people to (not) change their decisions, and we develop tools to help people understand information and knowledge."
-    url: "/projects"
-    btn_label: "Read more about our work"
-    btn_class: "btn--inverse"
-  - image_path: /assets/images/ischool.jpg
-    alt: "iSchool, Syracuse University"
-    title: "C4 lab"
-    excerpt: "We all come from different background but you can find us all in the iSchool at Syracuse University. #goOrange!"
-    url: "/people"
-    btn_label: "Get to know us!"
-    btn_class: "btn--inverse"
-  - image_path: /assets/images/writing.jpg
-    title: "Funding"
-    excerpt: "We could not be where we are without those who generously fund our research."
-    url: "/funding"
-    btn_label: "Meet the funders"
-    btn_class: "btn--inverse"
 ---
+<p id="front_matter">
+We are an interdisciplinary research group that uses <b>computational</b> techniques to examine the dynamics of online <b>communication</b>, drawing on insights from <b>complexity theory</b> and <b>cognitive science</b> to design online systems that promote social good.
+</p>
 
-{% include feature_row id="intro" type="center" %}
+<h2>Latest News</h2>
 
-{% include feature_row %}
-
-
-
+{% for post in site.posts limit:3 %}
+    {% include archive-single.html type=page.entries_layout %}
+{% endfor %}

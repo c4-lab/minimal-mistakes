@@ -1,4 +1,9 @@
 # main links
 main:
+main:
   - title: "Projects"
-    url: https://c4-lab.github.io/projects/
+    url:    /projects/
+  - title: "People"
+    url: /people/
+  - title: "News"
+    url: /posts/

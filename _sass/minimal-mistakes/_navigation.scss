@@ -177,13 +177,15 @@
   -ms-flex-align: center;
   align-items: center;
   min-height: $nav-height;
-  background: #fff;
+  background: $background-color;
 
   a {
     display: block;
     margin: 0 1rem;
     color: $masthead-link-color;
     text-decoration: none;
+    -webkit-transition: none;
+    transition: none;
 
     &:hover {
       color: $masthead-link-color-hover;
@@ -197,6 +199,11 @@
     &.site-title {
       margin-left: 0;
     }
+  }
+  
+  img{
+    -webkit-transition: none;
+    transition: none;
   }
 
   &__toggle {
@@ -236,7 +243,7 @@
         left: 0;
         bottom: 0;
         height: 4px;
-        background: #ff8a00;
+        background: $primary-color;
         width: 100%;
         -webkit-transition: $global-transition;
         transition: $global-transition;

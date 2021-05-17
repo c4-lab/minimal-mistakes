@@ -1,0 +1,38 @@
+---
+title: C4 lab
+layout: splash
+author_profile: false
+header:
+  overlay_image: /assets/images/sna-image-header.png
+intro:
+- excerpt: 'The C4 Lab is an indisciplinary research group that uses <b>computational</b> techniques to examine the dynamics of online <b>communication</b>, drawing on insights from <b>complexity theory</b> and <b>cognitive science</b>. Our research is aimed at designing online systems that promote social good.'
+
+feature_row:
+  - image_path: /assets/images/conspiracies.jpg
+    alt: "Everything is connected!"
+    title: "Projects & papers"
+    excerpt: "We map conspiracy theories narratives, analyze cognitive inertia, which belief systems cause people to (not) change their decisions, and we develop tools to help people understand information and knowledge."
+    url: "/projects"
+    btn_label: "Read more about our work"
+    btn_class: "btn--inverse"
+  - image_path: /assets/images/ischool.jpg
+    alt: "iSchool, Syracuse University"
+    title: "C4 lab"
+    excerpt: "We all come from different background but you can find us all in the iSchool at Syracuse University. #goOrange!"
+    url: "/people"
+    btn_label: "Get to know us!"
+    btn_class: "btn--inverse"
+  - image_path: /assets/images/writing.jpg
+    title: "Funding"
+    excerpt: "We could not be where we are without those who generously fund our research."
+    url: "/funding"
+    btn_label: "Meet the funders"
+    btn_class: "btn--inverse"
+---
+
+{% include feature_row id="intro" type="center" %}
+
+{% include feature_row %}
+
+
+

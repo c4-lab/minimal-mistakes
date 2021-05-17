@@ -12,21 +12,20 @@
 
 # theme                  : "minimal-mistakes-jekyll"
 # remote_theme           : "mmistakes/minimal-mistakes"
-minimal_mistakes_skin    : "contrast" #default" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
+minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
 # Site Settings
 locale                   : "en-US"
 title                    : "C4 lab"
-title-heading            : false
 title_separator          : "|"
 subtitle                 : # site tagline that appears below site title in masthead
 name                     : "C4 lab"
-description              : "A website of C4 lab at iSchool, Syracuse University"
+description              : "The website of the the C4 lab @ the iSchool, Syracuse University"
 url                      : "https://c4-lab.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : "c4-lab/c4-lab.github.io"
-teaser                   : "/assets/images/teaser.png"
-logo                     : "/assets/images/logo.png"
+teaser                   : "/assets/images/c4_logo_updated.png"
+logo                     : "/assets/images/c4_logo_updated.png"
 masthead_title           : " "
 breadcrumbs              : true
 words_per_minute         : 200
@@ -44,28 +43,15 @@ comments:
   utterances:
     theme                : # "github-light" (default), "github-dark"
     issue_term           : # "pathname" (default)
-staticman:
-  allowedFields          : # ['name', 'email', 'url', 'message']
-  branch                 : # "master"
-  commitMessage          : # "New comment by {fields.name}"
-  filename               : # comment-{@timestamp}
-  format                 : # "yml"
-  moderation             : # true
-  path                   : # "/_data/comments/{options.slug}" (default)
-  requiredFields         : # ['name', 'email', 'message']
-  transforms:
-    email                : # "md5"
-  generatedFields:
-    date:
-      type               : # "date"
-      options:
-        format           : # "iso8601" (default), "timestamp-seconds", "timestamp-milliseconds"
-  endpoint               : # URL of your own deployment with trailing slash, will fallback to the public instance
+  staticman:
+    branch               : # "master"
+    endpoint             : # "https://{your Staticman v3 API}/v3/entry/github/"
 reCaptcha:
-  siteKey                : 
-  secret                 : 
+  siteKey                :
+  secret                 :
 atom_feed:
   path                   : # blank (default) uses feed.xml
+  hide                   : # true, false (default)
 search                   : true
 search_full_content      : # true, false (default)
 search_provider          : # lunr (default), algolia, google
@@ -100,7 +86,7 @@ social:
 
 # Analytics
 analytics:
-  provider               : false # false (default), "google", "google-universal", "custom"
+  provider               : false # false (default), "google", "google-universal", "google-gtag", "custom"
   google:
     tracking_id          :
     anonymize_ip         : # true, false (default)
@@ -108,15 +94,15 @@ analytics:
 
 # Site Author
 author:
-  name             : "C4 lab"
+  name             : "C4 Lab"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : # bio
+  bio              : #"I am an **amazing** person."
   location         : "Syracuse, NY"
   email            :
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
-      # url: mailto:your.name@email.com
+      # url: "mailto:your.name@email.com"
     - label: "Website"
       icon: "fas fa-fw fa-link"
       # url: "https://your-website.com"
@@ -128,7 +114,7 @@ author:
       # url: "https://facebook.com/"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      url: "https://github.com/c4-lab"
+      # url: "https://github.com/"
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
       # url: "https://instagram.com/"
@@ -144,9 +130,10 @@ footer:
       # url:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      url: "https://github.com/c4-lab"
+      # url:
     - label: "GitLab"
       icon: "fab fa-fw fa-gitlab"
+      url: "https://github.com/c4-lab"
       # url:
     - label: "Bitbucket"
       icon: "fab fa-fw fa-bitbucket"
@@ -158,8 +145,8 @@ footer:
 
 # Reading Files
 include:
-  _pages
   - .htaccess
+  - _pages
 exclude:
   - "*.sublime-project"
   - "*.sublime-workspace"
@@ -181,6 +168,7 @@ exclude:
   - log
   - node_modules
   - package.json
+  - package-lock.json
   - Rakefile
   - README
   - tmp
@@ -223,7 +211,7 @@ sass:
 permalink: /:categories/:title/
 paginate: 5 # amount of posts to show
 paginate_path: /page:num/
-timezone: America/New_York
+timezone: # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
 
 # Plugins (previously gems:)
@@ -279,21 +267,17 @@ compress_html:
   ignore:
     envs: development
 
+# JEI My collections, added
+collections:
+  people:
+    output: true
+    permalink: /:path/
+
+  projects:
+    output: true
+    permalink: /:path/
 
 # Defaults
-defaults:
-  # _posts
-  - scope:
-      path: "/_posts/"
-      type: posts
-    values:
-      layout: splash
-      author_profile: false
-      read_time: true
-      comments: # true
-      share: true
-      related: true
-      
 defaults:
   # _pages
   - scope:
@@ -302,5 +286,31 @@ defaults:
     values:
       layout: single
       author_profile: true
-
-include: ["_pages"]
+  # _posts
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: single
+      author_profile: true
+      read_time: true
+      comments: # true
+      share: true
+      related: true
+  # _portfolio
+  - scope:
+      path: "/_people/"
+      type: people
+    values:
+      layout: single
+      author_profile: false
+      share: true
+      classes: testing
+      fooey: true
+  - scope:
+      path: "/_projects/"
+      type: projects
+    values:
+      layout: single
+      author_profile: false
+      share: true
