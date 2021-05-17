@@ -1,7 +1,7 @@
 ---
 title: "Jordan Lancaster"
 excerpt: "Undergraduate Student in the iSchool"
-url: https://www.linkedin.com/in/jordanlancaster99/
+custom_url: https://www.linkedin.com/in/jordanlancaster99/
 key: 9
 skip_pagination: true
 header:
