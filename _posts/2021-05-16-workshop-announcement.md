@@ -5,9 +5,9 @@ title: "Workshop announced"
 ## Beyond Misinformation: Towards a Research Agenda for Information Ecosystems, Network Dynamics and Emergent Epistemologies
 
 
-**Where:** Virtual (Zoom)\\
-**When:** Aug. 5/6, 2021\\
-**Submissions**: [https://easychair.org/cfp/INDE-2021](https://easychair.org/cfp/INDE-2021)
+**Where:** Virtual (Zoom)  
+**When:** Aug. 5/6, 2021  
+**Submissions**: [https://easychair.org/cfp/INDE-2021](https://easychair.org/cfp/INDE-2021)  
 
 This workshop starts from the premise that the problem of online misinformation is a symptom, not a cause. While undeniably problematic, misinformation is the current cause célèbre of a larger class of pathological dynamics that have emerged in our evolving digital media ecosystems and cause harm at different systemic levels. These dynamics are exacerbated by many aspects of our evolving digital infrastructure, including the affordances of different media platforms, algorithmic filters, the loss of trusted gatekeepers, the attention economy, and ever evolving modes of journalism. Additionally, cognitive factors as well as offline social structures, including systems of oppression, play an enormous role in shaping the consensual realities that emerge in digital spaces.    
 
@@ -26,10 +26,11 @@ Abstracts should be about 500 to 1000 words in length and should articulate conn
 
 ## Organizing Committee
 
-[Joshua Introne](http://127.0.0.1:4000/josh-introne/); The iSchool at Syracuse University\\
-[Brian McKernan](https://ischool.syr.edu/brian-mckernan/); The iSchool at Syracuse University\\
-[Whitney Phillips](https://vpa.syr.edu/people/whitney-phillips/); The College of Visual and Performing Arts at Syracuse University\\
-[Emily Thorson](https://www.maxwell.syr.edu/psc/Thorson,_Emily/); The Maxwell School at Syracuse University\\
+[Joshua Introne](http://127.0.0.1:4000/josh-introne/); The iSchool at Syracuse University  
+[Brian McKernan](https://ischool.syr.edu/brian-mckernan/); The iSchool at Syracuse University  
+[Whitney Phillips](https://vpa.syr.edu/people/whitney-phillips/); The College of Visual and Performing Arts at Syracuse University  
+[Emily Thorson](https://www.maxwell.syr.edu/psc/Thorson,_Emily/); The Maxwell School at Syracuse University  
+[Charisse L'Pree Corsbie-Massay](https://newhouse.syr.edu/people/charisse-lpree); The Newhouse School of Public Communications  
 
 ## Contact
 All questions about submissions should be emailed to [jeintron@syr.edu](mailto:jeintron@syr.edu).
