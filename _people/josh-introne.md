@@ -14,8 +14,7 @@ sidebar:
   - title: "Responsibilities"
     text: "Lab director"
   - title: Contact
-    text: "326 Hinds Hall  
-          jeintron@syr.edu"
+    text: "326 Hinds Hall; jeintron@syr.edu"
 
 ---
 
