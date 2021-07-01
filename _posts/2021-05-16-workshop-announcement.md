@@ -26,7 +26,7 @@ Abstracts should be about 500 to 1000 words in length and should articulate conn
 
 ## Organizing Committee
 
-[Joshua Introne](http://127.0.0.1:4000/josh-introne/); The iSchool at Syracuse University  
+[Joshua Introne](http://c4-lab.github.io/josh-introne/); The iSchool at Syracuse University  
 [Brian McKernan](https://ischool.syr.edu/brian-mckernan/); The iSchool at Syracuse University  
 [Whitney Phillips](https://vpa.syr.edu/people/whitney-phillips/); The College of Visual and Performing Arts at Syracuse University  
 [Emily Thorson](https://www.maxwell.syr.edu/psc/Thorson,_Emily/); The Maxwell School at Syracuse University  
