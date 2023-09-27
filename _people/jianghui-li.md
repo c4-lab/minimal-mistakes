@@ -1,7 +1,7 @@
 ---
 title: "Jianghui Li"
 excerpt: "Masters Student in the iSchool"
-custom_url: https://google.com
+custom_url: https://www.linkedin.com/in/jianghui-li-9804/
 key: 3
 skip_pagination: true
 header:
