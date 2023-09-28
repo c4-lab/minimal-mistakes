@@ -5,7 +5,7 @@ custom_url: https://www.linkedin.com/in/jianghui-li-9804/
 key: 3
 skip_pagination: true
 header:
-  teaser: assets/images/person_icon.png
+  teaser: assets/images/jianghui_li.jpeg
 sidebar:
   - title: Role
     image: assets/images/jianghui_li.jpeg
