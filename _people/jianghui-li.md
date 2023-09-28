@@ -8,7 +8,7 @@ header:
   teaser: assets/images/person_icon.png
 sidebar:
   - title: Role
-    image: assets/images/person_icon.png
+    image: assets/images/jianghui_li.jpeg
     image_alt: "picture"
     text: "Masters student @ the iSchool"
   - title: "Responsibilities"
