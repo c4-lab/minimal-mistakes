@@ -1,6 +1,6 @@
 ---
 title: "Qiusi (Lyra) Sun"
-excerpt: "Postdoctoral Researcher the iSchool"
+excerpt: "Postdoctoral Researcher in the iSchool"
 layout: single
 key: 1
 skip_pagination: true
