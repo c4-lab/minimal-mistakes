@@ -5,10 +5,10 @@ layout: single
 key: 1
 skip_pagination: true
 header:
-  teaser: assets/images/una_joh.JPG
+  teaser: assets/images/una_joh.jpg
 sidebar:
   - title: Role
-    image: assets/images/una_joh.JPG
+    image: assets/images/una_joh.jpg
     image_alt: "picture"
     text: "PhD Student in the iSchool"
   - title: "Responsibilities"
