@@ -1,5 +1,5 @@
 ---
-title: "Yuheun Kim"
+title: "Yuheun (Rachel) Kim"
 excerpt: "PhD Student in the iSchool"
 custom_url: https://yuheunk.github.io/
 key: 3
