@@ -5,10 +5,10 @@ custom_url: https://yuheunk.github.io/
 key: 3
 skip_pagination: true
 header:
-  teaser: assets/images/Yuheun-Kim.jpg
+  teaser: assets/images/Yuheun-Kim.JPG
 sidebar:
   - title: Role
-    image: assets/images/Yuheun-Kim.jpg
+    image: assets/images/Yuheun-Kim.JPG
     image_alt: "picture"
     text: "Ph.D. students @ the iSchool"
   - title: "Responsibilities"
