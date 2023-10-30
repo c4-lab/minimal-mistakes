@@ -1,0 +1,21 @@
+---
+title: "Interpretable Embedding Space"
+excerpt: "Designing interpretable embedding space for different cultures"
+layout: single
+key: 1
+skip_pagination: true
+header:
+  teaser: assets/images/xxx.png
+sidebar:
+  - title: Focus Areas
+    image: assets/images/xxx.png
+    image_alt: "picture"
+    text: "Interpreble Gender Space"
+  - title: "Status"
+    text: "Active"
+  - title: "People"
+    text: "Jinfen Li"
+  
+  
+---
+Diverse natural language processing (NLP) outperform the prevailing monolithic approach that might introduce challenges related to cultural representation and diversity. It offers significant benefits, including the integration of a wide array of cultural perspectives and precise interpretation across various dialects and social groups. Apart from diversity, interpretability allows us to gain deeper insights into how black-box models encode critical semantic information within the embedding space.
