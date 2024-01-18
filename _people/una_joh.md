@@ -5,7 +5,7 @@ layout: single
 key: 1
 skip_pagination: true
 header:
-  teaser: assets/images/una_joh.jpg
+  teaser: assets/images/una_joh_profile_43.jpg
 sidebar:
   - title: Role
     image: assets/images/una_joh.jpg
