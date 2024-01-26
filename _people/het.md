@@ -1,14 +1,14 @@
 ---
 title: "Het Trivedi"
-excerpt: "Masters in Applied Data Science @ iSchool"
+excerpt: "Masters in Applied Data Science at iSchool"
 custom_url: https://www.linkedin.com/in/het-trivedi
 key: 3
 skip_pagination: true
 header:
-  teaser: 
+  teaser: "C:\Users\hettr\OneDrive\Desktop\Applications\het.jpg"
 sidebar:
   - title: Role
-    image: 
+    image: "C:\Users\hettr\OneDrive\Desktop\Applications\het.jpg"
     image_alt: "picture"
     text: "Masters in Applied Data Science"
   - title: "Responsibilities"
