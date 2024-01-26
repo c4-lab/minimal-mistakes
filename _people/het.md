@@ -5,10 +5,10 @@ custom_url: https://www.linkedin.com/in/het-trivedi
 key: 3
 skip_pagination: true
 header:
-  teaser: ""
+  teaser:
 sidebar:
   - title: Role
-    image: ""
+    image:
     image_alt: "picture"
     text: "Masters in Applied Data Science"
   - title: "Responsibilities"
