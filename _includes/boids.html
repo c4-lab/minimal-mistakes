@@ -2,363 +2,457 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8" />
+    <meta charset="utf-8"/>
 </head>
 
 <body>
 
-    <div class="col-sm-8" id="div_basicResize">
-        <canvas width="1200" height="250"></canvas>
-        <canvas width="1200" height="250" class="offscreen" style="display: none;"></canvas>
-        <div id="control-panel-activator">
-            <a href="#">Show controls</a>
-        </div>
-        <div id="explain-simulation">
-            <a href="/social-simulation/">Explain</a>
-        </div>
+<div class="col-sm-8" id="div_basicResize">
+    <canvas width="1200" height="250"></canvas>
+    <canvas width="1200" height="250" class="offscreen" style="display: none;"></canvas>
+    <div id="control-panel-activator">
+        <a href="#">Show controls</a>
     </div>
-    <script src="/assets/js/d3.v4.min.js"></script>
-    <script src="/assets/js/dat.gui.min.js"></script>
-    <script>
-        // From vec2.js
-        function Vec2(x, y) {
-            this.x = x || 0;
-            this.y = y || 0;
-            this.count = 0;
-            return this;
+    <div id="explain-simulation">
+        <a href="/social-simulation/">Explain</a>
+    </div>
+</div>
+<script src="/assets/js/d3.v4.min.js"></script>
+<script src="/assets/js/dat.gui.min.js"></script>
+<script>
+    // From vec2.js
+    function Vec2(x, y) {
+        this.x = x || 0;
+        this.y = y || 0;
+        this.count = 0;
+        return this;
+    }
+
+    Vec2.prototype.add = function (v) {
+        this.x += v.x;
+        this.y += v.y;
+        return this;
+    };
+
+    Vec2.prototype.subtract = function (v) {
+        this.x -= v.x;
+        this.y -= v.y;
+        return this;
+    };
+
+    Vec2.prototype.scale = function (s) {
+        this.x = this.x * s;
+        this.y = this.y * s;
+        return this;
+    };
+
+    Vec2.prototype.scaleTo = function (s) {
+        var length = this.length();
+        this.x = this.x * s / length;
+        this.y = this.y * s / length;
+        return this;
+    };
+
+    Vec2.prototype.normalize = function () {
+        var length = this.length();
+        this.x = this.x / length;
+        this.y = this.y / length;
+        return this;
+    };
+
+    Vec2.prototype.noisify = function (m) {
+        var length = this.length();
+        this.x = (1 - m) * this.x + length * (1 - Math.random() * 2) * m;
+        this.y = (1 - m) * this.y + length * (1 - Math.random() * 2) * m;
+        return this.scaleTo(length);
+    }
+
+    Vec2.prototype.length = function () {
+        return Math.sqrt(this.x * this.x + this.y * this.y);
+    };
+
+    Vec2.prototype.truncate = function (max) {
+        var length = this.length();
+        if (length > max) {
+            this.x = this.x * max / length;
+            this.y = this.y * max / length;
+        }
+        return this;
+    };
+
+    Vec2.prototype.dot = function (v) {
+        return this.x * v.x + this.y * v.y;
+    };
+
+    Vec2.prototype.clone = function () {
+        return new Vec2(this.x, this.y);
+    };
+</script>
+<script>
+    var canvas = document.querySelector("canvas"),
+        context = canvas.getContext("2d"),
+        offscreen = document.querySelector(".offscreen"),
+        panel = document.querySelector("#div_basicResize"),
+        offscreenContext = offscreen.getContext("2d"),
+        gui = new dat.GUI({
+            autoPlace: false
+        });
+
+    var customContainer = panel.append(gui.domElement);
+    var width = 1200,
+        height = 250,
+        numBoids = 300,
+        flockmateRadius = 60,
+        separationDistance = 30,
+        maxVelocity = 5,
+        separationForce = 0.10,
+        alignmentForce = 0.03,
+        cohesionForce = 0.05,
+        bluecolor = "#000e54",
+        orangecolor = "#f76900",
+        bluenoise = .2,
+        orangenoise = 0,
+        bluehomophily = 0,
+        orangehomophily = 0,
+        blueheterophily = 0,
+        orangeheterophily = 0,
+        startingPosition = "Random",
+        coloring = "By Movement",
+        boids;
+
+    offscreenContext.globalAlpha = 0.85;
+
+    gui.add(window, "bluehomophily", -1, 1).step(.01);
+    gui.add(window, "blueheterophily", -1, 1).step(.01);
+    gui.add(window, "bluenoise", 0, 1).step(.01);
+    gui.add(window, "orangehomophily", -1, 1).step(.01);
+    gui.add(window, "orangeheterophily", -1, 1).step(.01);
+    gui.add(window, "orangenoise", 0, 1).step(.01);
+    //gui.hide()
+    //        gui.add(window, "maxVelocity", 0, 5).step(0.25);
+    //        gui.add(window, "cohesionForce", 0, 0.25);
+    //        gui.add(window, "alignmentForce", 0, 0.25);
+    //        gui.add(window, "separationForce", 0, 0.25);
+    //        gui.add(window, "numBoids", 1, 600).step(1).onChange(restart);
+    //        gui.add(window, "startingPosition", ["Random", "CircleIn", "CircleRandom", "Sine", "Phyllotaxis"]).onChange(restart);
+    //        gui.add(window, "coloring", ["Rainbow", "By Movement"]);
+    //        gui.add(window, "restart");
+
+    var control_link = document.querySelector("#control-panel-activator a");
+
+    var randomize = true
+
+    gui.__controllers.forEach((ctr) => {
+        ctr.onChange(() => {
+            randomize = false
+        })
+    })
+
+
+    control_link.onclick = function () {
+        if (gui.domElement.style.display === "none") {
+            gui.show();
+            control_link.innerHTML = "Hide controls"
+        } else {
+            gui.hide();
+            control_link.innerHTML = "Show controls"
         }
 
-        Vec2.prototype.add = function(v) {
-            this.x += v.x;
-            this.y += v.y;
-            return this;
-        };
+    };
 
-        Vec2.prototype.subtract = function(v) {
-            this.x -= v.x;
-            this.y -= v.y;
-            return this;
-        };
 
-        Vec2.prototype.scale = function(s) {
-            this.x = this.x * s;
-            this.y = this.y * s;
-            return this;
-        };
+    gui.hide();
 
-        Vec2.prototype.scaleTo = function(s) {
-            var length = this.length();
-            this.x = this.x * s / length;
-            this.y = this.y * s / length;
-            return this;
-        };
+    d3.select("canvas").on("click", function () {
+        var xy = d3.mouse(this);
+        gui.show();
+    });
 
-        Vec2.prototype.normalize = function() {
-            var length = this.length();
-            this.x = this.x / length;
-            this.y = this.y / length;
-            return this;
-        };
+    updateSize();
+    restart();
+    requestAnimationFrame(tick);
 
-        Vec2.prototype.noisify = function(m) {
-            var length = this.length();
-            this.x = (1-m)*this.x + length * (1 - Math.random() * 2) * m;
-            this.y = (1-m)*this.y + length * (1 - Math.random() * 2) * m;
-            return this.scaleTo(length);
-        }
+    function tick() {
 
-        Vec2.prototype.length = function() {
-            return Math.sqrt(this.x * this.x + this.y * this.y);
-        };
+        offscreenContext.clearRect(0, 0, width, height);
+        offscreenContext.drawImage(canvas, 0, 0, width, height);
+        context.clearRect(0, 0, width, height);
+        context.drawImage(offscreen, 0, 0, width, height);
 
-        Vec2.prototype.truncate = function(max) {
-            var length = this.length();
-            if (length > max) {
-                this.x = this.x * max / length;
-                this.y = this.y * max / length;
-            }
-            return this;
-        };
+        boids.forEach(function (b) {
 
-        Vec2.prototype.dot = function(v) {
-            return this.x * v.x + this.y * v.y;
-        };
+            var forces = {
+                alignment: new Vec2(),
+                cohesion: new Vec2(),
+                separation: new Vec2()
+            };
 
-        Vec2.prototype.clone = function() {
-            return new Vec2(this.x, this.y);
-        };
-    </script>
-    <script>
-        var canvas = document.querySelector("canvas"),
-            context = canvas.getContext("2d"),
-            offscreen = document.querySelector(".offscreen"),
-            panel = document.querySelector("#div_basicResize"),
-            offscreenContext = offscreen.getContext("2d"),
-            gui = new dat.GUI({
-                autoPlace: false
+            b.acceleration = new Vec2();
+
+            boids.forEach(function (b2) {
+                if (b === b2) return;
+
+                var diff = b2.position.clone().subtract(b.position),
+                    distance = diff.length();
+
+                if (distance && distance < separationDistance) {
+                    forces.separation.add(diff.clone().scaleTo(-1 / distance)).active = true;
+                }
+
+                //                    if (distance < flockmateRadius) {
+                //                        forces.cohesion.add(diff).active = true;
+                //                        forces.alignment.add(b2.velocity).active = true;
+                //                    }
+
+                if (distance < flockmateRadius) {
+
+                    var h = window[b.mycolor + (b.mycolor === b2.mycolor ? "homophily" : "heterophily")]
+                    var n = window[b.mycolor + "noise"]
+                    if (h != 0) {
+                        forces.cohesion.add(diff.noisify(n).scale(h)).active = true;
+                        forces.alignment.add(b2.velocity.clone().noisify(n).scale(h)).active = true;
+                    }
+                }
+
             });
 
-        var customContainer = panel.append(gui.domElement);
-        var width = 1200,
-            height = 250,
-            numBoids = 300,
-            flockmateRadius = 60,
-            separationDistance = 30,
-            maxVelocity = 5,
-            separationForce = 0.10,
-            alignmentForce = 0.03,
-            cohesionForce = 0.05,
-            bluecolor = "#000e54",
-            orangecolor = "#f76900",
-            bluenoise = .2,
-            orangenoise = 0,
-            bluehomophily = 0,
-            orangehomophily = 0,
-            blueheterophily = 0,
-            orangeheterophily = 0,
-            startingPosition = "Random",
-            coloring = "By Movement",
-            boids;
+
+            for (var key in forces) {
+                if (forces[key].active) {
+                    forces[key].scaleTo(maxVelocity)
+                        .subtract(b.velocity)
+                        .truncate(window[key + "Force"]);
+                    b.acceleration.add(forces[key]);
+                }
+            }
+
+            if (coloring === "By Movement") {
+                b.last.push(b.acceleration.length() / (alignmentForce + cohesionForce + separationForce));
+                if (b.last.length > 20) {
+                    b.last.shift();
+                }
+            }
+
+        });
+
+        boids.forEach(updateBoid);
+        requestAnimationFrame(tick);
+
+    }
+
+    function updateBoid(b) {
+        b.position.add(b.velocity.add(b.acceleration).truncate(maxVelocity));
+
+        if (b.position.y > height) {
+            b.position.y -= height;
+        } else if (b.position.y < 0) {
+            b.position.y += height;
+        }
+
+        if (b.position.x > width) {
+            b.position.x -= width;
+        } else if (b.position.x < 0) {
+            b.position.x += width;
+        }
+
+        context.beginPath();
+        if (coloring === "Rainbow") {
+            context.fillStyle = b.color;
+        } else {
+            context.fillStyle = window[b.mycolor + "color"];
+        }
+        context.arc(b.position.x, b.position.y, 2, 0, 2 * Math.PI);
+        context.fill();
+    }
+
+    function initializeRandom() {
+        return d3.range(numBoids).map(function (d, i) {
+            return {
+                mycolor: Math.random() > .5 ? "blue" : "orange",
+                position: new Vec2(Math.random() * width, Math.random() * height),
+                velocity: randomVelocity()
+            };
+        });
+    }
+
+    function initializePhyllotaxis() {
+        return d3.range(numBoids).map(function (d, i) {
+            var θ = Math.PI * i * (Math.sqrt(5) - 1),
+                r = Math.sqrt(i) * 200 / Math.sqrt(numBoids);
+
+            return {
+                position: new Vec2(width / 2 + r * Math.cos(θ), height / 2 - r * Math.sin(θ)),
+                velocity: radialVelocity(i / numBoids)
+            };
+        });
+    }
+
+    function initializeSine() {
+        return d3.range(numBoids).map(function (i) {
+            var angle = 2 * Math.PI * i / numBoids,
+                x = width * i / numBoids,
+                y = height / 2 + Math.sin(angle) * height / 4;
+
+            return {
+                position: new Vec2(x, y),
+                velocity: radialVelocity(i / numBoids)
+            };
+        });
+    }
+
+    function initializeCircleIn() {
+        return d3.range(numBoids).map(function (i) {
+            var angle = i * 2 * Math.PI / numBoids,
+                x = 200 * Math.sin(angle),
+                y = 200 * Math.cos(angle);
+
+            return {
+                position: new Vec2(x + width / 2, y + height / 2),
+                velocity: new Vec2(-x, -y).scale(maxVelocity)
+            };
+        });
+    }
+
+    function initializeCircleRandom() {
+        return d3.range(numBoids).map(function (i) {
+            var angle = i * 2 * Math.PI / numBoids,
+                x = 200 * Math.sin(angle),
+                y = 200 * Math.cos(angle);
+
+            return {
+                position: new Vec2(x + width / 2, y + height / 2),
+                velocity: randomVelocity().scale(maxVelocity)
+            };
+        });
+    }
+
+    function randomVelocity() {
+        return new Vec2(1 - Math.random() * 2, 1 - Math.random() * 2).scale(maxVelocity);
+    }
+
+    function radialVelocity(p) {
+        return new Vec2(Math.sin(2 * Math.PI * p), Math.cos(2 * Math.PI * p)).scale(maxVelocity);
+    }
+
+    function restart() {
+        offscreenContext.clearRect(0, 0, width, height);
+        context.clearRect(0, 0, width, height);
+
+        boids = window["initialize" + startingPosition]();
+        boids.forEach(function (b, i) {
+            b.color = b.mycolor;
+            b.last = [];
+        });
+    }
+
+    function updateSize() {
+        var elements = document.getElementsByTagName("canvas");
+
+        width = innerWidth | 0;
+
+        for (c of elements) {
+            c.width = width; // floor with |0
+            c.style.width = width + "px";
+
+
+        }
+        ;
+
+        var top = document.querySelector("div.masthead__inner-wrap");
+        console.log(top.clientHeight);
+        gui.domElement.style.top = top.clientHeight + "px";
 
         offscreenContext.globalAlpha = 0.85;
 
-        gui.add(window, "bluehomophily", -1, 1).step(.01);
-        gui.add(window, "blueheterophily", -1, 1).step(.01);
-        gui.add(window, "bluenoise", 0, 1).step(.01);
-        gui.add(window, "orangehomophily", -1, 1).step(.01);
-        gui.add(window, "orangeheterophily", -1, 1).step(.01);
-        gui.add(window, "orangenoise", 0, 1).step(.01);
-        //gui.hide()
-        //        gui.add(window, "maxVelocity", 0, 5).step(0.25);
-        //        gui.add(window, "cohesionForce", 0, 0.25);
-        //        gui.add(window, "alignmentForce", 0, 0.25);
-        //        gui.add(window, "separationForce", 0, 0.25);
-        //        gui.add(window, "numBoids", 1, 600).step(1).onChange(restart);
-        //        gui.add(window, "startingPosition", ["Random", "CircleIn", "CircleRandom", "Sine", "Phyllotaxis"]).onChange(restart);
-        //        gui.add(window, "coloring", ["Rainbow", "By Movement"]);
-        //        gui.add(window, "restart");   
+        //restart();
 
-        var control_link = document.querySelector("#control-panel-activator a");
+    }
 
-        control_link.onclick = function() {
-            if (gui.domElement.style.display === "none") {
-                gui.show();
-                control_link.innerHTML = "Hide controls"
-            } else {
-                gui.hide();
-                control_link.innerHTML = "Show controls"
+
+    // Linear interpolation function
+    function lerp(start, end, amt) {
+        return (1 - amt) * start + amt * end;
+    }
+
+    function updateGradually(param) {
+        param.current = lerp(param.current, param.target, 0.01);
+
+        if (Math.abs(param.current - param.target) < 0.01) {
+            param.target = Math.random() * (param.max - param.min) + param.min;
+        }
+    }
+
+    let blueHomRand = {
+        current: Math.random() * 2 - 1, // Starting value
+        target: Math.random() * 2 - 1, // Initial random target within the range [0, 100]
+        min: -1, // Minimum value
+        max: 1 // Maximum value
+    };
+
+    let orangeHomRand = {
+        current: Math.random() * 2 - 1, // Starting value
+        target: Math.random() * 2 - 1, // Initial random target within the range [0, 100]
+        min: -1, // Minimum value
+        max: 1 // Maximum value
+    };
+
+    let blueHetRand = {
+        current: Math.random() * 2 - 1, // Starting value
+        target: Math.random() * 2 - 1, // Initial random target within the range [0, 100]
+        min: -1, // Minimum value
+        max: 1 // Maximum value
+    };
+
+    let orangeHetRand = {
+        current: Math.random() * 2 - 1, // Starting value
+        target: Math.random() * 2 - 1, // Initial random target within the range [0, 100]
+        min: -1, // Minimum value
+        max: 1 // Maximum value
+    };
+
+    let blueNRand = {
+        current: Math.random(), // Starting value
+        target: Math.random(), // Initial random target within the range [0, 100]
+        min: 0, // Minimum value
+        max: 1 // Maximum value
+    };
+
+    let orangeNRand = {
+        current: Math.random() , // Starting value
+        target: Math.random() , // Initial random target within the range [0, 100]
+        min: 0, // Minimum value
+        max: 1 // Maximum value
+    };
+
+    function randomizeParams() {
+        // Update the parameter
+        updateGradually(blueHomRand);
+        updateGradually(orangeHomRand);
+        updateGradually(blueHetRand);
+        updateGradually(orangeHetRand);
+        updateGradually(blueNRand);
+        updateGradually(orangeNRand);
+
+        if (randomize) {
+            bluehomophily = blueHomRand.current
+            orangehomophily = orangeHomRand.current
+            blueheterophily = blueHetRand.current
+            orangeheterophily = orangeHetRand.current
+            bluenoise = blueNRand.current
+            orangenoise = orangeNRand.current
+
+            for (var i in gui.__controllers) {
+                gui.__controllers[i].updateDisplay();
             }
-
-        };
-
-
-        gui.hide();
-
-        d3.select("canvas").on("click", function() {
-            var xy = d3.mouse(this);
-            gui.show();
-        });
-
-        updateSize();
-        restart();
-        requestAnimationFrame(tick);
-
-        function tick() {
-
-            offscreenContext.clearRect(0, 0, width, height);
-            offscreenContext.drawImage(canvas, 0, 0, width, height);
-            context.clearRect(0, 0, width, height);
-            context.drawImage(offscreen, 0, 0, width, height);
-
-            boids.forEach(function(b) {
-
-                var forces = {
-                    alignment: new Vec2(),
-                    cohesion: new Vec2(),
-                    separation: new Vec2()
-                };
-
-                b.acceleration = new Vec2();
-
-                boids.forEach(function(b2) {
-                    if (b === b2) return;
-
-                    var diff = b2.position.clone().subtract(b.position),
-                        distance = diff.length();
-
-                    if (distance && distance < separationDistance) {
-                        forces.separation.add(diff.clone().scaleTo(-1 / distance)).active = true;
-                    }
-
-                    //                    if (distance < flockmateRadius) {
-                    //                        forces.cohesion.add(diff).active = true;
-                    //                        forces.alignment.add(b2.velocity).active = true;
-                    //                    }
-
-                    if (distance < flockmateRadius) {
-
-                        var h = window[b.mycolor + (b.mycolor === b2.mycolor ? "homophily" : "heterophily")]
-                        var n = window[b.mycolor + "noise"]
-                        if (h != 0) {
-                            forces.cohesion.add(diff.noisify(n).scale(h)).active = true;
-                            forces.alignment.add(b2.velocity.clone().noisify(n).scale(h)).active = true;
-                        }
-                    }
-
-                });
-
-
-
-
-                for (var key in forces) {
-                    if (forces[key].active) {
-                        forces[key].scaleTo(maxVelocity)
-                            .subtract(b.velocity)
-                            .truncate(window[key + "Force"]);
-                        b.acceleration.add(forces[key]);
-                    }
-                }
-
-                if (coloring === "By Movement") {
-                    b.last.push(b.acceleration.length() / (alignmentForce + cohesionForce + separationForce));
-                    if (b.last.length > 20) {
-                        b.last.shift();
-                    }
-                }
-
-            });
-
-            boids.forEach(updateBoid);
-            requestAnimationFrame(tick);
-
         }
 
-        function updateBoid(b) {
-            b.position.add(b.velocity.add(b.acceleration).truncate(maxVelocity));
+        requestAnimationFrame(randomizeParams);
 
-            if (b.position.y > height) {
-                b.position.y -= height;
-            } else if (b.position.y < 0) {
-                b.position.y += height;
-            }
+    }
 
-            if (b.position.x > width) {
-                b.position.x -= width;
-            } else if (b.position.x < 0) {
-                b.position.x += width;
-            }
-
-            context.beginPath();
-            if (coloring === "Rainbow") {
-                context.fillStyle = b.color;
-            } else {
-                context.fillStyle = window[b.mycolor+"color"];
-            }
-            context.arc(b.position.x, b.position.y, 2, 0, 2 * Math.PI);
-            context.fill();
-        }
-
-        function initializeRandom() {
-            return d3.range(numBoids).map(function(d, i) {
-                return {
-                    mycolor: Math.random() > .5 ? "blue" : "orange",
-                    position: new Vec2(Math.random() * width, Math.random() * height),
-                    velocity: randomVelocity()
-                };
-            });
-        }
-
-        function initializePhyllotaxis() {
-            return d3.range(numBoids).map(function(d, i) {
-                var θ = Math.PI * i * (Math.sqrt(5) - 1),
-                    r = Math.sqrt(i) * 200 / Math.sqrt(numBoids);
-
-                return {
-                    position: new Vec2(width / 2 + r * Math.cos(θ), height / 2 - r * Math.sin(θ)),
-                    velocity: radialVelocity(i / numBoids)
-                };
-            });
-        }
-
-        function initializeSine() {
-            return d3.range(numBoids).map(function(i) {
-                var angle = 2 * Math.PI * i / numBoids,
-                    x = width * i / numBoids,
-                    y = height / 2 + Math.sin(angle) * height / 4;
-
-                return {
-                    position: new Vec2(x, y),
-                    velocity: radialVelocity(i / numBoids)
-                };
-            });
-        }
-
-        function initializeCircleIn() {
-            return d3.range(numBoids).map(function(i) {
-                var angle = i * 2 * Math.PI / numBoids,
-                    x = 200 * Math.sin(angle),
-                    y = 200 * Math.cos(angle);
-
-                return {
-                    position: new Vec2(x + width / 2, y + height / 2),
-                    velocity: new Vec2(-x, -y).scale(maxVelocity)
-                };
-            });
-        }
-
-        function initializeCircleRandom() {
-            return d3.range(numBoids).map(function(i) {
-                var angle = i * 2 * Math.PI / numBoids,
-                    x = 200 * Math.sin(angle),
-                    y = 200 * Math.cos(angle);
-
-                return {
-                    position: new Vec2(x + width / 2, y + height / 2),
-                    velocity: randomVelocity().scale(maxVelocity)
-                };
-            });
-        }
-
-        function randomVelocity() {
-            return new Vec2(1 - Math.random() * 2, 1 - Math.random() * 2).scale(maxVelocity);
-        }
-
-        function radialVelocity(p) {
-            return new Vec2(Math.sin(2 * Math.PI * p), Math.cos(2 * Math.PI * p)).scale(maxVelocity);
-        }
-
-        function restart() {
-            offscreenContext.clearRect(0, 0, width, height);
-            context.clearRect(0, 0, width, height);
-
-            boids = window["initialize" + startingPosition]();
-            boids.forEach(function(b, i) {
-                b.color = b.mycolor;
-                b.last = [];
-            });
-        }
-
-        function updateSize() {
-            var elements = document.getElementsByTagName("canvas");
-
-            width = innerWidth | 0;
-
-            for (c of elements) {
-                c.width = width; // floor with |0
-                c.style.width = width + "px";
+    randomizeParams();
 
 
-            };
-
-            var top = document.querySelector("div.masthead__inner-wrap");
-            console.log(top.clientHeight);
-            gui.domElement.style.top = top.clientHeight+"px";
-
-            offscreenContext.globalAlpha = 0.85;
-
-            //restart();
-
-        }
-
-        window.addEventListener('resize', updateSize);
-    </script>
+    // setInterval(updateRandomParameters, time_interval);
+    window.addEventListener('resize', updateSize);
+</script>
