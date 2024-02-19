@@ -8,7 +8,7 @@ header:
   teaser: assets/images/interpretable-space.svg
 sidebar:
   - title: Focus Areas
-    image: assets/images/xxx.png
+    image: assets/images/interpretable-space.svg
     image_alt: "picture"
     text: "Interpreble Embedding Space"
   - title: "Status"
