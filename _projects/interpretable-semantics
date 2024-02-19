@@ -5,7 +5,7 @@ layout: single
 key: 1
 skip_pagination: true
 header:
-  teaser: assets/images/xxx.png
+  teaser: assets/images/interpretable-space.svg
 sidebar:
   - title: Focus Areas
     image: assets/images/xxx.png
