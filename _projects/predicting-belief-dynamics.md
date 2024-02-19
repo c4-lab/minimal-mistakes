@@ -5,10 +5,10 @@ layout: single
 key: 1
 skip_pagination: true
 header:
-  teaser: assets/images/xxx.png
+  teaser: assets/images/beliefs.jpg
 sidebar:
   - title: Focus Areas
-    image: assets/images/xxx.png
+    image: assets/images/beliefs.jpg
     image_alt: "picture"
     text: "Belief Dynamics"
   - title: "Status"
